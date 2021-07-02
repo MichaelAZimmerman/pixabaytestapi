@@ -14,8 +14,9 @@ const Favorites = ({ favorites, deleteFavorite, username }) => {
             isFave={true}
             deleteFavorite={deleteFavorite}
             tags={pic.tags}
-            url={pic.previewURL}
+            url={pic.url}
             key={pic.id}
+            download={pic.download}
           />
         ))}
       </div>
