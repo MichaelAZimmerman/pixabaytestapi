@@ -1,3 +1,16 @@
+header {
+  background-color: steelblue;
+  color: lightskyblue;
+}
+
+body {
+  background-color: steelblue;
+}
+
+main {
+  background-color: lightskyblue;
+}
+
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +19,7 @@
 
 .link {
   flex-basis: calc(100% / 3 - 10px);
-  background-color: goldenrod;
+  background-color: lightcoral;
   text-decoration: none;
   padding: 5px;
   flex-grow: 1;
@@ -14,13 +27,13 @@
 
 .link,
 .btn {
-  color: white;
+  color: black;
 }
 
 .active,
 .btn {
-  color: black;
-  background-color: darkorange;
+  color: white;
+  background-color: indianred;
 }
 
 .link:not(.active):hover {

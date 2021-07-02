@@ -6,7 +6,7 @@ const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <form>
+    <form className="text-center">
       <div className="flex-wrap">
         <label htmlFor="username">Username</label>
         <input
