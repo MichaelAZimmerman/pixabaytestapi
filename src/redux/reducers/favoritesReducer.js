@@ -8,7 +8,7 @@ export default function favoritesReducer(
 ) {
   switch (action.type) {
     case ADD_FAVORITE:
-      return [...state, action.gif];
+      return [...state, action.pic];
     case DELETE_FAVORITE:
       return state.filter((val) => val.id !== action.id);
     case CLEAR_FAVORITES:

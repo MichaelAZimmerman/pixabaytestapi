@@ -43,3 +43,29 @@ main {
 .text-center {
   text-align: center;
 }
+
+.flex-column {
+  flex-direction: column;
+}
+.image-container {
+  flex-basis: calc(100% / 4 - 34px);
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: salmon;
+  padding: 5px;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin: 5px auto;
+  max-height: 300px;
+}
+
+button {
+  margin: 5px;
+}
+
+form {
+  padding-top: 10px;
+}
