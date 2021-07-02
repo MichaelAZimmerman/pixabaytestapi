@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { clearFavorites, clearUser, clearSearch } from "./redux/actions";
+import ProtectedRoute from "./shared/ProtectedRoute";
 import Login from "./components/Login";
 import Search from "./components/Search";
 import Favorites from "./components/Favorites";
@@ -18,7 +19,7 @@ function App({ username, clearFavorites, clearSearch, clearUser }) {
     <Router>
       <header className="flex-wrap">
         {username ? (
-          <h3>{username} is currently logged in.</h3>
+          <h3>Currently logged in as {username}</h3>
         ) : (
           <h3>Please log in to continue.</h3>
         )}
@@ -70,6 +71,20 @@ function App({ username, clearFavorites, clearSearch, clearUser }) {
           </>
         )}
       </nav>
+      <main>
+        <Switch>
+          <ProtectedRoute path="/login" reqUser={false} component={Login} />
+          <ProtectedRoute path="/search" reqUser={true} component={Search} />
+          <ProtectedRoute
+            path="/favorites"
+            reqUser={true}
+            component={Favorites}
+          />
+          <Route path="*">
+            <Redirect to="/login" />
+          </Route>
+        </Switch>
+      </main>
     </Router>
   );
 }

@@ -11,8 +11,15 @@
   padding: 5px;
   flex-grow: 1;
 }
+
+.link,
+.btn {
+  color: white;
+}
+
 .active,
 .btn {
+  color: black;
   background-color: darkorange;
 }
 
