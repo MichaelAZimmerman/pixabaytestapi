@@ -53,7 +53,7 @@ main {
   flex-direction: column;
 }
 .image-container {
-  flex-basis: calc(100% / 4 - 34px);
+  flex-basis: calc(100% / 2 - 34px);
   margin: 10px;
   border: 2px solid black;
   border-radius: 10px;
@@ -87,4 +87,16 @@ form {
 }
 .marginBottom {
   margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .image-container {
+    flex-basis: calc(100% / 3 - 34px);
+  }
+}
+
+@media (min-width: 800px) {
+  .image-container {
+    flex-basis: calc(100% / 4 - 34px);
+  }
 }

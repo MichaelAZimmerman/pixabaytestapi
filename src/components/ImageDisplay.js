@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 function ImageDisplay({
   id,
@@ -12,17 +13,27 @@ function ImageDisplay({
   return (
     <div className="image-container flex-wrap flex-column">
       <h5 className="text-center">Search tags: {tags}</h5>
-      <button onClick={() => window.open(`${download}`)}>
+      <Button variant="contained" onClick={() => window.open(`${download}`)}>
         Open Hi-Res Image
-      </button>
+      </Button>
       <img className="" alt="image" src={url} />
       {isFave && (
-        <button onClick={() => deleteFavorite(id)}>Delete Favorite</button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => deleteFavorite(id)}
+        >
+          Delete Favorite
+        </Button>
       )}
       {!isFave && (
-        <button onClick={() => addFavorite({ id, tags, url })}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => addFavorite({ id, tags, url })}
+        >
           Add Favorite
-        </button>
+        </Button>
       )}
     </div>
   );
