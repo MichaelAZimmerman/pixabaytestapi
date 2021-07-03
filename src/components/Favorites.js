@@ -6,7 +6,7 @@ import ImageDisplay from "./ImageDisplay";
 const Favorites = ({ favorites, deleteFavorite, username }) => {
   return (
     <div className="top-padding">
-      <h2 className="text-center">Favorites for {username}</h2>
+      <h2 className="text-center fav-text">Favorites for {username}</h2>
       <div className="flex-wrap">
         {favorites.map((pic) => (
           <ImageDisplay

@@ -3,6 +3,10 @@ header {
   color: lightskyblue;
 }
 
+.fav-text {
+  color: steelblue;
+}
+
 body {
   background-color: steelblue;
 }
