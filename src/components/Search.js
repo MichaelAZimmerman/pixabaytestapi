@@ -27,7 +27,7 @@ const Search = ({
     <div>
       <form className="text-center">
         <div className="flex-wrap">
-          <label htmlFor="search">Search images by keyword: </label>
+          <label htmlFor="search">Search images tags: </label>
           <input
             id="search"
             value={searchField}

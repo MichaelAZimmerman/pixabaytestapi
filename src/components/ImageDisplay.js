@@ -12,7 +12,7 @@ function ImageDisplay({
   return (
     <div className="image-container flex-wrap flex-column">
       <h5 className="text-center">Search tags: {tags}</h5>
-      <button onClick={() => window.open(`${download}`, "_blank")}>
+      <button onClick={() => window.open(`${download}`)}>
         Open Hi-Res Image
       </button>
       <img className="" alt="image" src={url} />

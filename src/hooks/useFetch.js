@@ -12,8 +12,11 @@ export default function useFetch(url) {
   useEffect(() => {
     setError(null);
     setData(null);
-    if (url.length < 3) {
+    if (url.length < 3 && url.length !== 0) {
       setError("Search must be at least 3 characters long!");
+      return;
+    } else if (url.length == 0) {
+      setError("Enter keywords above to search.");
       return;
     }
     async function callAPI() {
