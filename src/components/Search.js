@@ -3,6 +3,7 @@ import ImageDisplay from "./ImageDisplay";
 import useFetch from "../hooks/useFetch";
 import { connect } from "react-redux";
 import { setSearch, addFavorite, deleteFavorite } from "../redux/actions";
+import Button from "@material-ui/core/Button";
 
 const Search = ({
   addFavorite,
@@ -25,25 +26,27 @@ const Search = ({
   }, [data]);
   return (
     <div>
-      <form className="text-center">
-        <div className="flex-wrap">
-          <label htmlFor="search">Search images tags: </label>
+      <form className="text-center marginBottom">
+        <div className="flex-wrap margin">
+          <label htmlFor="search">Search Images Tags: </label>
           <input
             id="search"
             value={searchField}
+            className="marginLeft"
             onChange={(e) => setSearchField(e.target.value)}
             placeholder="Search for Images"
           />
         </div>
-        <button
-          className=""
+        <Button
+          variant="contained"
+          color="primary"
           onClick={(e) => {
             e.preventDefault();
             setQuery(searchField);
           }}
         >
           Search
-        </button>
+        </Button>
       </form>
       {loading && <div className="text-center">Loading Images</div>}
       {error && <div className="text-center">{error}</div>}

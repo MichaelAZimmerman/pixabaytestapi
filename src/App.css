@@ -13,6 +13,7 @@ body {
 
 main {
   background-color: lightskyblue;
+  min-height: 150px;
 }
 
 .flex-wrap {
@@ -76,4 +77,14 @@ form {
 
 .top-padding {
   padding-top: 15px;
+}
+
+.margin {
+  margin: 10px;
+}
+.marginLeft {
+  margin-left: 10px;
+}
+.marginBottom {
+  margin-bottom: 10px;
 }

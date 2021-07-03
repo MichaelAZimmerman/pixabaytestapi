@@ -8,28 +8,30 @@ const Login = ({ setUser }) => {
   const [password, setPassword] = useState("");
   return (
     <form className="text-center">
-      <div className="flex-wrap">
+      <div className="flex-wrap margin">
         <label htmlFor="username">Username</label>
         <input
           id="username"
+          className="marginLeft"
           onChange={(e) => setUsername(e.target.value)}
           value={username}
         />
       </div>
-      <div className="flex-wrap">
+      <div className="flex-wrap margin">
         <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
+          className="marginLeft"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
       </div>
+      <br />
 
       <Button
         variant="contained"
         color="primary"
-        className=""
         onClick={(e) => {
           e.preventDefault();
           if (username.length > 4 && password.length > 4) {
