@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { setUser } from "../redux/actions";
+import Button from "@material-ui/core/Button";
 
 const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
@@ -25,7 +26,9 @@ const Login = ({ setUser }) => {
         />
       </div>
 
-      <button
+      <Button
+        variant="contained"
+        color="primary"
         className=""
         onClick={(e) => {
           e.preventDefault();
@@ -36,7 +39,7 @@ const Login = ({ setUser }) => {
         }}
       >
         Login
-      </button>
+      </Button>
     </form>
   );
 };

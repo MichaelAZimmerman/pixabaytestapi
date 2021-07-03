@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./App.css";
+import "@fontsource/roboto";
 import { clearFavorites, clearUser, clearSearch } from "./redux/actions";
 import ProtectedRoute from "./shared/ProtectedRoute";
 import Login from "./components/Login";
