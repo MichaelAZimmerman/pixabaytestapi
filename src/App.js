@@ -20,9 +20,9 @@ function App({ username, clearFavorites, clearSearch, clearUser }) {
     <Router>
       <header className="flex-wrap">
         {username ? (
-          <h3>Currently logged in as {username}</h3>
+          <h2>Currently logged in as {username}</h2>
         ) : (
-          <h3>Please log in to continue.</h3>
+          <h2>Please log in to continue.</h2>
         )}
       </header>
 

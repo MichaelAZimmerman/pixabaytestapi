@@ -34,7 +34,8 @@ main {
 
 .link,
 .btn {
-  color: black;
+  font-weight: 700;
+  color: rgb(47, 77, 105);
 }
 
 .active,
@@ -44,7 +45,7 @@ main {
 }
 
 .link:not(.active):hover {
-  background-color: cornflowerblue;
+  background-color: rgb(92, 176, 255);
 }
 
 .text-center {
@@ -60,7 +61,7 @@ main {
   margin: 10px;
   border: 2px solid steelblue;
   border-radius: 10px;
-  background-color: lightcoral;
+  background-color: rgb(229, 157, 157);
   padding: 5px;
 }
 img {
@@ -108,5 +109,11 @@ form {
 @media (min-width: 800px) {
   .img-container {
     flex-basis: calc(100% / 4 - 34px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .img-container {
+    flex-basis: calc(100% / 5 - 34px);
   }
 }
