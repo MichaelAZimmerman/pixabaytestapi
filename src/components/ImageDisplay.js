@@ -30,7 +30,7 @@ function ImageDisplay({
         <Button
           variant="contained"
           color="primary"
-          onClick={() => addFavorite({ id, tags, url })}
+          onClick={() => addFavorite({ id, tags, url, download })}
         >
           Add Favorite
         </Button>
